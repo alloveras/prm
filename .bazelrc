@@ -1,0 +1,2 @@
+startup --norotating_server_log
+build --symlink_prefix=/

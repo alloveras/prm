@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package edu.prm.beer;
+
+import "beer_service_protos/operations/list_all_beers.proto";
+import "beer_service_protos/operations/create_beer.proto";
+import "beer_service_protos/operations/get_beer_by_id.proto";
+
+service Beer {
+    // ListAllBeers returns a paginated view containing all the existing beers in the system.
+    rpc ListAllBeers (operations.ListAllBeersRequest) returns (operations.ListAllBeersResponse);
+    // CreateBeer creates a new beer entity in the system with the provided characteristics.
+    rpc CreateBeer (operations.CreateBeerRequest) returns (operations.CreateBeerResponse);
+    // GetBeerById returns a particular beer entity given its id. If the entity doesn't exist in
+    // the system, an error is returned to the caller.
+    rpc GetBeerById (operations.GetBeerByIdRequest) returns (operations.GetBeerByIdResponse);
+}

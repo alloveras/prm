@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package edu.prm.beer.domain;
+
+message Beer {
+    string id = 1;
+    string name = 2;
+    float price = 3;
+}

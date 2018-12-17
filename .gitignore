@@ -1,0 +1,10 @@
+# OSX filesystem journaling file.
+.DS_Store
+
+# Editors & IDE folders.
+.vscode/
+.idea/
+*.iml
+
+# Bazel output locations (either they are a folder or a symlink)
+.bazel

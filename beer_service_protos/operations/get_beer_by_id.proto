@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package edu.prm.beer.operations;
+
+import "beer_service_protos/domain/beer.proto";
+
+message GetBeerByIdRequest {
+    string id = 1;
+}
+
+message GetBeerByIdResponse {
+    domain.Beer beer = 1;
+}

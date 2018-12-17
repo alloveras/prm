@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package edu.prm.uuid;
+
+import "uuid_service_protos/operations/create_uuid.proto";
+
+service Uuid {
+    // CreateUuid returns a Universally Unique Identifier that is compliant with RFC-4122
+    // version 4 specification. For more details, s ee: https://tools.ietf.org/html/rfc4122
+    rpc CreateUuid (operations.CreateUuidRequest) returns (operations.CreateUuidResponse);
+}

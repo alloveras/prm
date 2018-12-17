@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+import "beer_service_protos/domain/beer.proto";
+
+package edu.prm.beer.operations;
+
+message ListAllBeersRequest {
+    int32 page_size = 1;
+    string pagination_token = 2;
+}
+
+message ListAllBeersResponse {
+    repeated domain.Beer beers = 1;
+    string pagination_token = 3;
+}
